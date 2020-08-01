@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int checkPrimeNumber(int number);
+
+
+int main(int argc, char *argv[], char ** envp){
+    
+    int result=0, num;
+    
+    printf("Gets the number, please\n");
+    scanf("%d",&num);
+    
+    result=checkPrimeNumber(num);
+    printf("%d\n",result);
+    
+    if (result>2 || num<=1)
+    {
+        printf("The number %d is not a prime number.\n",num);
+    }
+    
+    else 
+        printf("The number %d is a prime number\n",num);
+        
+        
+    return 0;    
+    
+    
+}
+
+    int checkPrimeNumber(int no){
+        
+        int flag=0,i=1;
+        
+        for(i;i<=no;i++){
+            
+            if(no%i==0){
+                flag++;
+            }
+            
+        }
+        return flag;
+        
+    }
